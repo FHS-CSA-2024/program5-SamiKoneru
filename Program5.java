@@ -16,10 +16,10 @@ public class Program5 {
         double perGalKoopa = (double) milesKoopa / galKoopa;
         double perGalPipe = (double) milesPipe / galPipe;
         double perGalBadwagon = (double) milesBadwagon / galBadwagon;
-        perGalRoyale = (double) Math.round(perGalRoyale * 10) / 10;     //Rounding, probably an easier way but I multiplied by 10, rounded, then divided
-        perGalKoopa = (double) Math.round(perGalKoopa * 10) / 10;
-        perGalPipe = (double) Math.round(perGalPipe * 10) / 10;
-        perGalBadwagon = (double) Math.round(perGalBadwagon * 10) / 10;
+        perGalRoyale = (int) (10 * perGalRoyale + 0.5) / 10.0;    //round using int and then double casting
+        perGalKoopa = (int) (10 * perGalKoopa + 0.5) / 10.0;
+        perGalPipe = (int) (10 * perGalPipe + 0.5) / 10.0;
+        perGalBadwagon = (int) (10 * perGalBadwagon + 0.5) / 10.0;
         System.out.println("Mushroom Cup Prix Racer Average Miles/Per Gallon:");    //printing output
         System.out.println("Royale averaged " + perGalRoyale + " mi/gal");
         System.out.println("Koopa King averaged " + perGalKoopa + " mi/gal");
